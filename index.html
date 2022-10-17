@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password generator</title>
+  <link rel="stylesheet" href="./src/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+  <form class="form" id="form">
+    <div class="container-password">
+      <p class="label-password">Aquí aparecerá tu contraseña  =  </p>      
+      <p id="password" class="password">   </p>
+      <span class="copy" id="copy">
+        
+      </span>
+    </div>
+    
+    <div class="option">      
+      <p>Define el total de caracteres de tu contraseña</p>
+      <input type="range" 
+             name="length"
+             id="numberRange" 
+             min="8" 
+             max="128" 
+             value="8" 
+             step="1"
+            />
+      <span id="rangeVal">8</span>
+    </div>
+    <section class="List-option">         
+        <div class="option">
+          <p>Incluye : </p>
+        </div>
+        <div class="option">
+          <input type="checkbox" name="letters" id="">
+          <p>letras</p>
+        </div>
+        <div class="option">
+          <input type="checkbox" name="numbers" id="">
+          <p>numeros</p>
+        </div>
+        <div class="option">
+          <input type="checkbox" name="symbols" id="">
+          <p>simbolos</p>
+        </div>
+        <div class="option">
+          <input type="checkbox" name="words" id="words">
+          <p>palabras</p>
+        </div>
+    </section>
+    <div class="option" >
+        <button class="button-basic" 
+              type="submit" 
+              id="generate-button">
+              Generar
+        </button>
+        <div class="option" name="notas" id="notas">
+          
+        </div>
+        
+    </div>
+  </form>
+
+  <script type="module" src="./src/index.js"></script>
+  <script src="./src/axios.js" ></script>
+</body>
+
+</html>
